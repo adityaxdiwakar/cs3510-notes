@@ -25,7 +25,7 @@
 	\MakeScribeTop
 
     Homework 1 will be released either today (Thursday) or tomorrow (Friday)
-    and due a week afterwards (either Friday of Saturday of next week).
+    and due a week afterwards (either Friday or Saturday of next week).
 
     \section{Addition and Multiplication}
     This class will generally focus on these concepts from an algorithmic 
@@ -134,9 +134,9 @@
         \end{tikzpicture}
     \end{center}
     For brevity, the rest of the tree is not drawn. Further, the above tree
-    is more verbose in reality. Splitting from $1 \to 4$ multiplications
+    is more verbose than reality. Splitting from $1 \to 4$ multiplications
     happens in one step by splitting both $a$ and $b$ into halves on each
-    step. The next step in the tree would split into a total of $8$ 
+    step. The next two steps in the tree would split into a total of $16$ 
     multiplications each of which contain $1$ bit to multiply.\\
 
     In order to reconstruct the final solution, we add together children on
@@ -203,7 +203,7 @@
     \end{enumerate}
     In a sense, we can compute $x \times y$ by using the halves of the numbers.
     In the above equation, how do we compute $x_L y_L$? This is where recursion
-    and divide and conquer come in! $x_L y_L$ is computed with the same
+    and divide and conquer comes in! $x_L y_L$ is computed with the same
     equation as above with \textit{its own halves}. Here is pseudocode that
     makes the recursion more obvious.
     \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
@@ -279,20 +279,6 @@
     \begin{align*}
         T(n) = O(n) + 3T\left(\frac{n}{2}\right)
     \end{align*}
-    This is $O\left(n^{\log_2 3}\right) \approx O\left(n^{1.59}\right)$
-
-   
-
-    % def mult(x, y):
-    %   x_l \gets x[0   :   n/2]
-    %   x_r \gets x[n/2 :   n]
-    %   y_l \gets y[0   :   n/2]
-    %   y_r \gets y[n/2 :   n]
-    %   A \gets mult(x_l, y_l)
-    %   D \gets mult(x_r, y_r)
-    %   Q \gets mult(x_L + x_r, y_l + y_r)
-    % return 2^n A + 2^{n/2} (Q - A - D) + D
-
-    % recurrence is $T(n) = O(n) + 3T(n/2) 
-    % hence, runtime O(n \log_2 3) = O(n ^ 1.59)
+    This is $O\left(n^{\log_2 3}\right) \approx O\left(n^{1.59}\right)$ as you
+    will be able to solve next week.
 \end{document}
