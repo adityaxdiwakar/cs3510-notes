@@ -266,7 +266,7 @@
             $y_L \gets y[0 : n/2]$      \\
             $y_R \gets y[n/2 : n]$      \\
             $A \gets$ \Call{\FMain{$x_L, y_L$}} \\
-            $B \gets$ \Call{\FMain{$x_L, y_R$}} \\
+            $D \gets$ \Call{\FMain{$x_R, y_R$}} \\
             \tcp{new multiplication, but no more $B$ and $C$}\\
             $Q \gets$ \Call{\FMain{$x_L + x_R, y_L + y_R$}} \\
             \Return $2^n A + 2^{n/2} (Q - A - D) + D$
