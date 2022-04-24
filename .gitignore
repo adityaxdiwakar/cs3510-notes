@@ -302,3 +302,5 @@ TSWLatexianTemp*
 
 scribe.sty
 .DS_Store
+
+*.tex
